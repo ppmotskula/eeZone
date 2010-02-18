@@ -1,0 +1,68 @@
+eeZone 1.0, 2010-02-18
+Copyright © 2010 Peeter P. Mõtsküla <peeterpaul@motskula.net>
+
+eeZone is a simple tool for extracting useful information from the
+.ee zone file.
+
+
+INSTALLATION
+============
+
+Extract the contents of eeZone distribution archive into a directory of
+your liking (henceforth referred to as $EEZONE).
+Create a directory $EEZONE/data, and save a copy of the .ee zone file into
+$EEZONE/data/eeZone.txt
+
+Make sure you have bash, perl, sqlite3, host and whois installed and available
+in your $PATH.
+
+You'll want your computer to be connected to the internet whenever you use
+eeZone.
+
+
+USAGE
+=====
+
+Do-it-all-at-once:
+
+    cd $EEZONE
+    ./eeZone.sh -r -s
+
+The script will probably take an hour or more to run. Once it's ready,
+you'll find eeZone.db and a bunch of *sql and *txt files in $EEZONE/data.
+Feel free to delete the *sql files if you want; they were only used to
+create the eeZone.db SQLite3 database from which all the *txt files
+except the original eeZone.txt were generated.
+
+Run any script without any parameters to get information about other
+command line options.
+
+Read the code and occasional comments to understand how it all works.
+
+
+BUGS AND IMPROVEMENTS
+=====================
+
+If you find a bug or have an idea for a new feature, feel free to fix
+or implement it. You'll find the code from http://github.com/wolli/eeZone .
+It'd be nice if you'd share your contributions with the original author who
+might eventually include them in a new version of the program.
+
+Should you have no time or skills to fix bugs or implement new features,
+please report your findings at http://github.com/wolli/eeZone/issues .
+
+
+LICENSE
+=======
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
